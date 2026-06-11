@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HashVault — Hash, Encode & Crypto Tools for AI Agents</title>
+  <meta name="description" content="8 pure-Python MCP tools: MD5, SHA-256, SHA-512, Base64, URL encode, HMAC, UUID, random string generation. Free + $9/mo Pro.">
+  <meta property="og:title" content="HashVault — Hash & Encode Toolkit">
+  <meta property="og:description" content="8 pure-Python MCP tools. Zero API keys. Free tier available.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      color: #e0e0e0; min-height: 100vh; line-height: 1.6;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .header { text-align: center; padding: 3rem 0 2rem; }
+    .logo { font-size: 3.5rem; margin-bottom: 0.5rem; }
+    h1 { font-size: 2.2rem; background: linear-gradient(90deg, #7c3aed, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { color: #a0a0b0; font-size: 1.1rem; margin-top: 0.5rem; }
+    .badges { margin: 1rem 0; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+    .badge { 
+      background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3);
+      padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; color: #c4b5fd;
+    }
+    .tools-section { margin: 2rem 0; }
+    h2 { color: #c4b5fd; font-size: 1.4rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(124, 58, 237, 0.2); padding-bottom: 0.5rem; }
+    .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; }
+    .tool-card { 
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px; padding: 1rem; transition: border-color 0.2s;
+    }
+    .tool-card:hover { border-color: rgba(124, 58, 237, 0.4); }
+    .tool-card .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .tool-card h3 { color: #e8e8f0; font-size: 0.95rem; }
+    .tool-card p { color: #808090; font-size: 0.8rem; margin-top: 0.25rem; }
+    .pricing { 
+      background: rgba(124, 58, 237, 0.08); border: 1px solid rgba(124, 58, 237, 0.2);
+      border-radius: 16px; padding: 1.5rem; margin: 2rem 0; display: flex; gap: 2rem;
+    }
+    .tier { flex: 1; text-align: center; }
+    .tier:first-child { border-right: 1px solid rgba(255,255,255,0.08); padding-right: 1rem; }
+    .tier h3 { font-size: 1.1rem; color: #e0e0f0; }
+    .tier .price { font-size: 2rem; font-weight: bold; color: #7c3aed; margin: 0.5rem 0; }
+    .tier .limit { color: #808090; font-size: 0.85rem; }
+    .cta { text-align: center; margin: 2rem 0; }
+    .btn { 
+      display: inline-block; background: linear-gradient(135deg, #7c3aed, #3b82f6);
+      color: white; padding: 0.9rem 2.5rem; border-radius: 12px; text-decoration: none;
+      font-weight: 600; font-size: 1.1rem; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(124, 58, 237, 0.3); }
+    .code-block { 
+      background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px; padding: 1.2rem; margin: 1rem 0; overflow-x: auto;
+      font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.9rem; color: #a8b2c0;
+    }
+    .footer { text-align: center; padding: 2rem 0; color: #606070; font-size: 0.85rem; }
+    .footer a { color: #7c3aed; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">🔐</div>
+      <h1>HashVault</h1>
+      <p class="subtitle">8 hash, encode &amp; crypto tools for AI agents. Zero API keys. Pure Python.</p>
+      <div class="badges">
+        <span class="badge">MCP Server</span>
+        <span class="badge">Python 3.9+</span>
+        <span class="badge">MIT License</span>
+        <span class="badge">50 Free Calls</span>
+      </div>
+    </div>
+
+    <div class="tools-section">
+      <h2>🛠️ Tools</h2>
+      <div class="tool-grid">
+        <div class="tool-card"><div class="icon">🔒</div><h3>hash_generate</h3><p>MD5, SHA-1, SHA-256, SHA-512, SHA3, BLAKE2</p></div>
+        <div class="tool-card"><div class="icon">✅</div><h3>hash_compare</h3><p>Verify file integrity against known hash</p></div>
+        <div class="tool-card"><div class="icon">📦</div><h3>encode_base64</h3><p>Base64 encode/decode</p></div>
+        <div class="tool-card"><div class="icon">🔗</div><h3>encode_url</h3><p>URL percent-encode/decode</p></div>
+        <div class="tool-card"><div class="icon">🏷️</div><h3>encode_html</h3><p>HTML entity encode/decode</p></div>
+        <div class="tool-card"><div class="icon">✍️</div><h3>crypto_hmac</h3><p>HMAC-SHA256/512 signatures</p></div>
+        <div class="tool-card"><div class="icon">🆔</div><h3>crypto_uuid</h3><p>UUID v4/v7 generation</p></div>
+        <div class="tool-card"><div class="icon">🎲</div><h3>crypto_random</h3><p>Secure random string generation</p></div>
+      </div>
+    </div>
+
+    <div class="pricing">
+      <div class="tier">
+        <h3>🆓 Free</h3>
+        <div class="price">$0</div>
+        <p class="limit">50 calls per server start</p>
+      </div>
+      <div class="tier">
+        <h3>⭐ Pro</h3>
+        <div class="price">$9<span style="font-size:1rem">/mo</span></div>
+        <p class="limit">Unlimited calls</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="https://buy.stripe.com/14kg3reZT1Fv9H2288" class="btn">Upgrade to Pro →</a>
+    </div>
+
+    <h2>📦 Quick Install</h2>
+    <div class="code-block">
+      $ npx smithery install hashvault --client claude<br><br>
+      <span style="color:#6b7280"># Or manual:</span><br>
+      $ git clone https://github.com/Rumblingb/hashvault.git<br>
+      $ cd hashvault &amp;&amp; pip install -r requirements.txt<br>
+      $ python3 server.py
+    </div>
+
+    <h2>🧪 Example: SHA-256 Hash</h2>
+    <div class="code-block">
+      {<br>
+      &nbsp;&nbsp;"tool": "hash_generate",<br>
+      &nbsp;&nbsp;"text": "Hello, World!",<br>
+      &nbsp;&nbsp;"algorithm": "sha256"<br>
+      }<br><br>
+      → dffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f
+    </div>
+
+    <div class="footer">
+      <p>Part of <a href="https://github.com/Rumblingb/agentpay-labs-hub">AgentPay Labs</a> · <a href="https://github.com/Rumblingb/hashvault">GitHub</a> · <a href="https://smithery.ai/servers/vishar-rumbling/hashvault">Smithery</a></p>
+      <p>Built Jun 11, 2026 · One new MCP server every day</p>
+    </div>
+  </div>
+</body>
+</html>
